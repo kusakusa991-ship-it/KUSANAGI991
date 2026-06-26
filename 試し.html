@@ -10,4 +10,29 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>文字カウンター</title>
+</head>
+<body>
+    <h3>文字カウンター</h3>
+    <!-- 入力エリア -->
+    <textarea id="textInput" rows="5" cols="40" placeholder="ここに文字を入力してください..."></textarea>
+    
+    <!-- カウント表示エリア -->
+    <p>文字数: <span id="charCount">0</span></p>
+
+    <script>
+        const input = document.getElementById('textInput');
+        const count = document.getElementById('charCount');
+
+        // 入力があるたびに実行されるイベント
+        input.addEventListener('input', () => {
+            count.textContent = input.value.length;
+        });
+    </script>
+</body>
+</html>
 
